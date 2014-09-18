@@ -49,6 +49,19 @@ var createSourcesObject =function(){
 	return sources;
 };
 
+var createSourcesObject2 =function(){
+	var sources = {};
+	client.HGETALL(['MDM:AllSources'], function(err,obj){
+		
+		for(i in obj)
+		{
+			console.log(JSON.parse(obj[i]));
+			sources[JSON.parse(obj[i])] = client.HGET('MDM:AllSources', JSON.parse(obj[i]));
+		}
+	});
+
+	return sources;
+};
 
 
 var allSources = function(){
