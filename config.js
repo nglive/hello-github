@@ -14,5 +14,6 @@ config.MdmPresenceAPI = 'http://test-presence-api.v.int.wc1.yp.com/api/listings/
 config.SourcesSummaryAPI = 'http://test-presence-api.v.int.wc1.yp.com/api/sources/summary?app=bsc';
 config.MdmAppId = 'app=bsc';
 
+// added some more random code for github playing around
 
 module.exports = config;
